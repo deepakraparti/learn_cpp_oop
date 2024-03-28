@@ -13,7 +13,10 @@ int main()
   cout << "Creating an array of size " << size << "...\n";
   arr = new int[size];
 
-  cout << "Dynamically allocated memory for the array\n";
+  if(!arr)
+    cout << "Dynamic memory allocation failed\n";
+  else
+    cout << "Dynamically allocated memory for the array\n";
 
   delete arr;
   cout << "Deleted the dynamocally allocated memory for the array\n";
