@@ -14,6 +14,7 @@ class string
     friend string operator+(const string &a, const string &b);
     void operator=(const string &a);
     friend int operator<=(const string &a, const string &b);
+    friend int operator==(const string &a, const string &b);
     friend void show(const string s);
 };
 
@@ -62,6 +63,14 @@ int operator<=(const string &a, const string &b)
     return (0);
 }
 
+int operator==(const string &a, const string &b)
+{
+  if (strcmp(a.p,b.p) == 0)
+    return 1;
+  else
+    return 0; 
+}
+
 void show(const string s)
 {
   std::cout << s.p;
@@ -72,10 +81,11 @@ int main()
   string s1 = "New ";
   string s2 = "York";
   string s3 = "Delhi";
-  string string1, string2, string3;
+  string string1, string2, string3, string4;
   string1 = s1;
   string2 = s2;
   string3 = s1+s3;
+  string4 = s1;
 
 
   std::cout << "string1 = "; show(string1);
@@ -96,6 +106,21 @@ int main()
     std::cout << " smaller than ";
     show(string1);
     std::cout << "\n";
+  }
+
+  if (string1 == string4)
+  {
+    show(string1);
+    std::cout << " and ";
+    show(string4);
+    std::cout << " are equal\n";
+  }
+  else
+  {
+    show(string1);
+    std::cout << " and ";
+    show(string4);
+    std::cout << " are not equal\n";
   }
 
   return 0;
