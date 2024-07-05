@@ -3,7 +3,7 @@
 class A
 {
   public:
-    virtual ~A()
+    virtual ~A() // if this is not declared as virtual then derived class destructor wont get called.
     {
       std::cout << "Base class destructor\n";
     }
