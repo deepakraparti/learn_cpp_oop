@@ -62,7 +62,7 @@ int main()
   s = &t;
   s->get_data(x, y);
   s->display_area();
-  
+
   cout << "Enter the sides x and y of the rectangle: ";
   cin >> x >> y;
 
