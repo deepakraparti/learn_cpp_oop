@@ -52,6 +52,7 @@ int main()
 
   cout << "Contents after deletion: " << endl;
   display(v);
+  cout << "Size = " << v.size() << " capacity = " << v.capacity() << endl;
 
   // Reverse the vector 
   reverse(v.begin(), v.end());
